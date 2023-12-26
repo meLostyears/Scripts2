@@ -281,12 +281,7 @@ function joinTeam(layer = 0) {
 
 function signIn() {
     return new Promise(async (resolve, _reject) => {
-        let nowString = lk.formatDate(new Date(), 'yyyyMMdd')
-        if (nowString == checkSignInRepeat) {
-            lk.prependNotifyInfo('今日已经签到，无法重复签到～～')
-            resolve(1)
-            return
-        }
+        
         const t = '签到'
         let url = {
             url: 'https://member.alipan.com/v1/activity/sign_in_list',
